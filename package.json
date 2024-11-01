@@ -3,7 +3,7 @@
     "setup": "npm init && npm i -D webpack webpack-cli css-loader style-loader html-loader html-webpack-plugin webpack-dev-server babel-loader @babel/core @babel/preset-env babel-jest jest && npm init @eslint/config@latest && npm i --save-dev --save-exact prettier && node --eval 'fs.writeFileSync('babel.config.js', 'module.exports = {presets: [['@babel/preset-env', {targets: {node: 'current'}}]],};')'",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
-    "fix": "eslint --fix && npx prettier . --write",
+    "fix": "eslint ./src/*.js --fix && npx prettier ./src/* --write",
     "test": "jest",
     "watch": "jest --watch *.js"
   },
