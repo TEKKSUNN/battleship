@@ -16,3 +16,33 @@ export default class Ship {
     this.hits++;
   }
 }
+
+export class Cruiser extends Ship {
+  constructor() {
+    return super(5);
+  }
+}
+
+export class BattleShip extends Ship {
+  constructor() {
+    return super(4);
+  }
+}
+
+export class PatrolBoat extends Ship {
+  constructor() {
+    return super(3);
+  }
+}
+
+export class Destroyer extends Ship {
+  constructor() {
+    return super(3);
+  }
+}
+
+export class RescueShip extends Ship {
+  constructor() {
+    return super(2);
+  }
+}
