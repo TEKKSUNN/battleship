@@ -11,7 +11,14 @@ export default [
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        jest: true, // Ensure Jest globals are defined
+        beforeEach: true, // Explicitly add `beforeEach` if needed
+        describe: true,
+        test: true,
+        expect: true,
+      },
       parserOptions: {
         ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
